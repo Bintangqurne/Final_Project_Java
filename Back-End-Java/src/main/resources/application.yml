@@ -1,0 +1,25 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/finpro_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:password123}
+  jpa:
+    hibernate:
+      ddl-auto: ${DDL_AUTO:update}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:dbee96a8ec1d931709435413672754f07f3e689cdecd036af7455fc4c9797040}
+    expiration-minutes: ${JWT_EXP_MINUTES:1440}
+  midtrans:
+    server-key: ${MIDTRANS_SERVER_KEY:SB-Mid-server-bFsbc8FLgh5_gSqoN_65KYne}
+    production: ${MIDTRANS_PRODUCTION:false}
+  admin:
+    bootstrap-enabled: ${ADMIN_BOOTSTRAP_ENABLED:false}
+    username: ${ADMIN_USERNAME:admin}
+    email: ${ADMIN_EMAIL:admin@mail.com}
+    name: ${ADMIN_NAME:Admin}
+    password: ${ADMIN_PASSWORD:admin12345}
