@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: ${DB_URL:jdbc:mysql://localhost:3306/finpro_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: ${DDL_AUTO:update}
@@ -15,11 +15,11 @@ app:
     secret: ${JWT_SECRET}
     expiration-minutes: ${JWT_EXP_MINUTES:1440}
   midtrans:
-    server-key: ${MIDTRANS_SERVER_KEY:}
+    server-key: ${MIDTRANS_SERVER_KEY}
     production: ${MIDTRANS_PRODUCTION:false}
   admin:
     bootstrap-enabled: ${ADMIN_BOOTSTRAP_ENABLED:false}
     username: ${ADMIN_USERNAME:admin}
     email: ${ADMIN_EMAIL:admin@mail.com}
     name: ${ADMIN_NAME:Admin}
-    password: ${ADMIN_PASSWORD:}
+    password: ${ADMIN_PASSWORD}
